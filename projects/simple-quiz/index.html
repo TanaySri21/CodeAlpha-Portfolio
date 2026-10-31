@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Welcome Screen -->
+        <section id="home-screen" class="screen">
+
+            <nav class="navbar">
+                <div class="logo">⚡ Quiz Arena</div>
+                <span class="tag">CHALLENGE YOUR MIND</span>
+            </nav>
+
+            <div class="hero">
+                <p class="eyebrow">WELCOME TO THE ARENA</p>
+                <h1>Ready to test<br>your <span>knowledge?</span></h1>
+                <p class="subtitle">
+                    Challenge yourself, beat your high score
+                    and become a quiz champion.
+                </p>
+            </div>
+
+            <div class="setup-card">
+
+                <h2>Choose Your Challenge</h2>
+
+                <label>Select Category</label>
+
+                <div class="category-grid">
+
+                    <button class="category active" data-category="general">
+                        <span>🌍</span>
+                        <strong>General</strong>
+                        <small>Knowledge</small>
+                    </button>
+
+                    <button class="category" data-category="technology">
+                        <span>💻</span>
+                        <strong>Technology</strong>
+                        <small>Computer & IT</small>
+                    </button>
+
+                    <button class="category" data-category="science">
+                        <span>🔬</span>
+                        <strong>Science</strong>
+                        <small>Discover More</small>
+                    </button>
+
+                </div>
+
+                <label>Select Difficulty</label>
+
+                <div class="difficulty-options">
+
+                    <button class="difficulty active" data-level="easy">
+                        Easy
+                    </button>
+
+                    <button class="difficulty" data-level="medium">
+                        Medium
+                    </button>
+
+                    <button class="difficulty" data-level="hard">
+                        Hard
+                    </button>
+
+                </div>
+
+                <div class="high-score-box">
+                    <span>🏆 Your Best Score</span>
+                    <strong id="home-best-score">0</strong>
+                </div>
+
+                <button id="start-btn" class="primary-btn">
+                    Start Quiz <span>→</span>
+                </button>
+
+            </div>
+
+            <p class="footer-text">
+                THINK SMART • PLAY HARD • LEARN MORE
+            </p>
+
+        </section>
+
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+
+            <nav class="quiz-nav">
+
+                <div class="logo">⚡ Quiz Arena</div>
+
+                <button id="sound-btn" class="icon-btn" title="Toggle sound">
+                    🔊
+                </button>
+
+            </nav>
+
+
+            <div class="quiz-info">
+
+                <span id="category-label">GENERAL KNOWLEDGE</span>
+
+                <span id="question-counter">QUESTION 1/5</span>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+
+            <!-- Timer -->
+            <div class="timer-area">
+
+                <div class="timer-circle">
+                    <span id="timer">15</span>
+                    <small>SEC</small>
+                </div>
+
+                <p>Time remaining</p>
+
+            </div>
+
+
+            <!-- Question Card -->
+            <div class="question-card">
+
+                <div class="question-top">
+                    <span id="difficulty-label">EASY</span>
+                    <span id="points-label">10 POINTS</span>
+                </div>
+
+                <h2 id="question">
+                    Your question will appear here.
+                </h2>
+
+                <div id="choices" class="choices"></div>
+
+                <p id="feedback"></p>
+
+
+                <!-- Lifeline -->
+                <div class="lifeline-area">
+
+                    <span>NEED SOME HELP?</span>
+
+                    <button id="lifeline-btn">
+                        ✨ 50:50 Lifeline
+                    </button>
+
+                </div>
+
+                <button id="next-btn" class="primary-btn">
+                    Next Question →
+                </button>
+
+            </div>
+
+
+            <!-- Streak -->
+            <div class="streak-box">
+
+                <div>
+                    <span>🔥 Current Streak</span>
+                    <strong id="streak">0</strong>
+                </div>
+
+                <div>
+                    <span>⭐ Total Points</span>
+                    <strong id="live-score">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen hidden">
+
+            <div class="result-card">
+
+                <div class="trophy">🏆</div>
+
+                <p class="eyebrow">CHALLENGE COMPLETED</p>
+
+                <h1 id="result-title">Amazing Work!</h1>
+
+                <p id="result-message">
+                    You completed the quiz.
+                </p>
+
+                <div class="score-circle">
+
+                    <strong id="final-score">0</strong>
+
+                    <span>POINTS</span>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat">
+                        <strong id="correct-count">0</strong>
+                        <span>Correct</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong id="accuracy">0%</strong>
+                        <span>Accuracy</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong id="best-score">0</strong>
+                        <span>Best Score</span>
+                    </div>
+
+                </div>
+
+                <div id="achievement" class="achievement">
+                    🥇 Quiz Champion
+                </div>
+
+                <button id="restart-btn" class="primary-btn">
+                    Play Again ↻
+                </button>
+
+                <button id="home-btn" class="secondary-btn">
+                    Change Category
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="new.js"></script>
+
+</body>
+</html>

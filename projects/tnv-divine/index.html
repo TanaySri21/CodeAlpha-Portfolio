@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNV Divine | Taste Beyond Ordinary</title>
+  <link rel="stylesheet" href="res.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#home" class="logo">
+    <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+    <span>TNV <b>DIVINE</b><small>TASTE BEYOND ORDINARY</small></span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <nav id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="#cart" class="nav-cart">
+      <i class="fa-solid fa-bag-shopping"></i> Cart
+      <span id="cartCount">0</span>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">WELCOME TO TNV DIVINE</span>
+      <h1>Good Food.<br><span>Great Moments.</span></h1>
+      <p>Discover delicious flavours, freshly prepared meals and unforgettable dining experiences.</p>
+
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#booking" class="btn btn-outline">Book a Table</a>
+      </div>
+
+      <div class="hero-note">
+        <i class="fa-solid fa-star"></i> Fresh ingredients • Made with love
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900" alt="Delicious restaurant food">
+      <div class="floating-card">
+        <i class="fa-solid fa-heart"></i>
+        <span>Made fresh, served with love</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-strip">
+    <i class="fa-solid fa-fire"></i>
+    <span>Special Offer: Enjoy delicious food and exciting deals at TNV Divine!</span>
+    <a href="#menu">Order Now</a>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section booking-section" id="booking">
+    <div class="section-heading">
+      <span class="eyebrow">RESERVE YOUR EXPERIENCE</span>
+      <h2>Book Your Table</h2>
+      <p>Planning a meal with friends or family? Reserve your table in advance.</p>
+    </div>
+
+    <form id="bookingForm" class="booking-form">
+      <input type="text" id="customerName" placeholder="Your full name" required>
+      <input type="date" id="bookingDate" required>
+      <input type="time" id="bookingTime" required>
+
+      <select id="guestCount" required>
+        <option value="">Number of guests</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5 Guests</option>
+        <option value="6">6 Guests</option>
+      </select>
+
+      <button class="btn btn-primary" type="submit">Reserve Table</button>
+    </form>
+
+    <p id="bookingMessage" class="form-message" aria-live="polite"></p>
+
+    <div class="reservation-history">
+      <div class="reservation-history-heading">
+        <div>
+          <span class="eyebrow">YOUR BOOKINGS</span>
+          <h3>My Reservations</h3>
+          <p>View your saved table reservation details here.</p>
+        </div>
+        <button type="button" id="viewReservations" class="btn btn-outline">
+          <i class="fa-solid fa-calendar-check"></i> View Bookings
+        </button>
+      </div>
+
+      <div id="reservationList" class="reservation-list">
+        <p class="empty-message">You haven't made any reservations yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section menu-section" id="menu">
+    <div class="section-heading">
+      <span class="eyebrow">MADE TO DELIGHT</span>
+      <h2>Explore Our Menu</h2>
+      <p>Find your favourite food and add it to your cart.</p>
+    </div>
+
+    <div class="menu-tools">
+      <input type="search" id="searchInput" placeholder="Search your favourite food...">
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Drinks">Drinks</option>
+      </select>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+    <p id="noProducts" class="empty-message hidden">No food items found. Try another search.</p>
+  </section>
+
+  <!-- VIP OFFER -->
+  <section class="vip-section">
+    <div>
+      <span class="eyebrow">A LITTLE EXTRA FOR YOU</span>
+      <h2>Unlock Your Divine Treat!</h2>
+      <p>Add items worth ₹1,000 or more to your cart to unlock our special 10% VIP discount.</p>
+    </div>
+    <div class="vip-icon"><i class="fa-solid fa-crown"></i></div>
+  </section>
+
+  <!-- CART -->
+  <section class="section cart-section" id="cart">
+    <div class="section-heading">
+      <span class="eyebrow">YOUR SELECTION</span>
+      <h2>Your Shopping Cart</h2>
+      <p>Your delicious choices are waiting for you.</p>
+    </div>
+
+    <div class="cart-layout">
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <h3>Your cart is empty</h3>
+          <p>Explore our menu and add something delicious!</p>
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        </div>
+      </div>
+
+      <aside class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-line"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+        <div class="summary-line"><span>Discount</span><strong id="discount">₹0</strong></div>
+        <div class="summary-line"><span>Delivery</span><strong id="delivery">₹0</strong></div>
+        <div class="summary-line total-line"><span>Total</span><strong id="grandTotal">₹0</strong></div>
+
+        <p class="vip-status" id="vipStatus">Add ₹1,000 worth of items to unlock your VIP offer.</p>
+        <button id="checkoutButton" class="btn btn-primary full-btn" disabled>Proceed to Checkout</button>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PAYMENT -->
+  <section class="section payment-section hidden" id="paymentSection">
+    <div class="section-heading">
+      <span class="eyebrow">ALMOST THERE</span>
+      <h2>Complete Your Order</h2>
+      <p>Choose a payment method to place your demo order.</p>
+    </div>
+
+    <div class="payment-card">
+      <h3>Payment Details</h3>
+      <p class="payment-total">Amount to pay: <strong id="paymentAmount">₹0</strong></p>
+
+      <label for="paymentMethod">Select payment method</label>
+      <select id="paymentMethod">
+        <option value="Demo Online Payment">Demo Online Payment</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+      </select>
+
+      <button id="payButton" class="btn btn-primary full-btn">Pay & Place Order</button>
+      <p class="secure-note"><i class="fa-solid fa-lock"></i> Demo checkout — no real money will be charged.</p>
+      <p id="paymentMessage" class="form-message" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section section" id="about">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900" alt="Restaurant dining experience">
+    </div>
+
+    <div class="about-content">
+      <span class="eyebrow">OUR STORY</span>
+      <h2>More Than Just Food</h2>
+      <p>At TNV Divine, we believe that great food brings people together. Our goal is to make every meal special with delicious flavours, quality ingredients and warm hospitality.</p>
+      <p>From comforting Indian favourites to delightful international dishes, our menu brings something special to every food lover.</p>
+
+      <div class="about-highlights">
+        <span><i class="fa-solid fa-leaf"></i> Fresh Ingredients</span>
+        <span><i class="fa-solid fa-utensils"></i> Delicious Menu</span>
+        <span><i class="fa-solid fa-heart"></i> Customer First</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section shop-section" id="shop">
+    <div class="section-heading">
+      <span class="eyebrow">ORDER WITH EASE</span>
+      <h2>Your Favourite Food, Your Way</h2>
+      <p>Enjoy a simple and convenient ordering experience with TNV Divine.</p>
+    </div>
+
+    <div class="shop-grid">
+      <div class="info-card">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Easy Ordering</h3>
+        <p>Browse our menu, select your favourites and add them to your cart in just a few clicks.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-tags"></i>
+        <h3>Special Offers</h3>
+        <p>Enjoy exciting discounts and special offers on selected orders.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h3>Table Booking</h3>
+        <p>Plan your visit and submit a table reservation request before arriving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT AND FEEDBACK -->
+  <section class="section contact-section" id="contact">
+    <div class="section-heading">
+      <span class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+      <h2>Contact & Support</h2>
+      <p>Have a question, complaint or suggestion? Get in touch with us.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h3>Our Location</h3>
+            <p>Greater Noida, Delhi-NCR, Uttar Pradesh, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h3>Email Us</h3>
+            <p><a href="mailto:contact@tnvdivine.com">contact@tnvdivine.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p><a href="tel:98765433210">98765433210</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <h3>Opening Hours</h3>
+            <p>Monday – Sunday: 10:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+
+        <a class="btn btn-outline map-link"
+           href="https://www.google.com/maps/search/?api=1&query=Greater+Noida+Uttar+Pradesh"
+           target="_blank" rel="noopener">
+          <i class="fa-solid fa-map"></i> Find Us on Map
+        </a>
+      </div>
+
+      <div class="feedback-area">
+        <form id="suggestionForm" class="suggestion-form">
+          <h3>Suggestion & Complaint Box</h3>
+          <p>Your feedback helps us serve you better.</p>
+
+          <input type="text" id="feedbackName" placeholder="Your name" required>
+          <input type="email" id="feedbackEmail" placeholder="Your email address" required>
+
+          <select id="feedbackType" required>
+            <option value="">Select feedback type</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Food Feedback">Food Feedback</option>
+            <option value="Order Issue">Order Issue</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <textarea id="feedbackMessage" rows="5" placeholder="Write your message here..." required></textarea>
+
+          <button type="submit" class="btn btn-primary full-btn">
+            <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+          </button>
+
+          <p id="feedbackStatus" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <!-- Submitted feedback appears here -->
+        <div class="feedback-history">
+          <div class="feedback-history-heading">
+            <div>
+              <h3>Your Submitted Feedback</h3>
+              <p>Messages submitted from this browser will appear here.</p>
+            </div>
+            <span id="feedbackCount" class="feedback-count">0</span>
+          </div>
+
+          <div id="feedbackList" class="feedback-list">
+            <p class="empty-message">No feedback submitted yet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">
+    <a href="#home" class="logo footer-logo">
+      <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+      <span>TNV <b>DIVINE</b><small>TASTE BEYOND ORDINARY</small></span>
+    </a>
+    <p>Serving happiness, one delicious meal at a time.</p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <a href="#menu">Our Menu</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking">Book a Table</a>
+  </div>
+
+  <div class="footer-links">
+    <h3>Contact</h3>
+    <p>Greater Noida, Delhi-NCR</p>
+    <a href="mailto:contact@tnvdivine.com">contact@tnvdivine.com</a>
+    <a href="tel:98765433210">98765433210</a>
+  </div>
+
+  <div class="copyright">© 2026 TNV Divine. All rights reserved.</div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" class="toast" role="status"></div>
+
+<!-- ORDER RECEIPT -->
+<div id="receiptModal" class="modal hidden">
+  <div class="receipt">
+    <button id="closeReceipt" class="close-modal" aria-label="Close receipt">&times;</button>
+    <div class="receipt-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <h2>Order Placed!</h2>
+    <p>Thank you for choosing TNV Divine.</p>
+    <div id="receiptDetails"></div>
+    <button id="doneButton" class="btn btn-primary full-btn">Continue</button>
+  </div>
+</div>
+
+<script src="res.js"></script>
+</body>
+</html>

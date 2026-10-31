@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#181c24">
+
+    <title>KAYASTH MOTORS | Car Detailing & Customization</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script defer src="slider.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+
+        <a href="#home" id="logo-corner">
+            <img src="Logo.svg" alt="Kayasth Motors Logo">
+            <span>KAYASTH <b>MOTORS</b></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services-container">Services</a></li>
+            <li><a href="#about-container">About Us</a></li>
+            <li><a href="#contact-container">Contact Us</a></li>
+            <li>
+                <button class="nav-book-btn" onclick="openBooking()">
+                    Book Now
+                </button>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HOME / HERO SECTION -->
+    <section id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                PREMIUM CAR CARE & CUSTOMIZATION
+            </span>
+
+            <h1 class="h-primary">
+                Welcome to <span>Kayasth Motors</span>
+            </h1>
+
+            <p>
+                Your Car. Your Style. Our Passion.
+                Experience premium car detailing, protection and customization.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn" onclick="openBooking()">
+                    Book a Service
+                </button>
+
+                <a href="#services-container" class="btn-outline">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO IMAGE SLIDER -->
+        <div class="hero-image-container">
+
+            <div class="slider">
+
+                <img src="https://img.wallscloud.net/uploads/thumb/1306947625/Mini_Cooper-1024x576-MM-80.webp"
+                    class="slide active" alt="Mini Cooper">
+
+                <img src="https://cdn.pixabay.com/photo/2022/04/24/12/26/car-7153508_1280.jpg"
+                    class="slide" alt="Luxury Car">
+
+                <img src="https://cdn.pixabay.com/photo/2021/03/04/14/39/cars-6068215_960_720.jpg"
+                    class="slide" alt="Premium Cars">
+
+                <img src="https://cdn.pixabay.com/photo/2021/08/31/19/12/toyota-supra-6589899_1280.jpg"
+                    class="slide" alt="Toyota Supra">
+
+            </div>
+
+            <button class="slider-btn prev" aria-label="Previous slide">
+                &#10094;
+            </button>
+
+            <button class="slider-btn next" aria-label="Next slide">
+                &#10095;
+            </button>
+
+            <div class="slider-dots" id="sliderDots"></div>
+
+            <div class="slide-counter" id="slideCounter">
+                01 / 04
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div>↓</div>
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section id="highlights">
+
+        <div class="highlight">
+            <span>✨</span>
+            <h3>Premium Quality</h3>
+            <p>Quality-focused car care solutions.</p>
+        </div>
+
+        <div class="highlight">
+            <span>🛠️</span>
+            <h3>Expert Work</h3>
+            <p>Professional detailing and customization.</p>
+        </div>
+
+        <div class="highlight">
+            <span>🛡️</span>
+            <h3>Car Protection</h3>
+            <p>Solutions to protect your vehicle.</p>
+        </div>
+
+        <div class="highlight">
+            <span>🚘</span>
+            <h3>Customer First</h3>
+            <p>Your satisfaction is our priority.</p>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="services-container">
+
+        <div class="section-heading">
+
+            <span class="small-heading">WHAT WE OFFER</span>
+
+            <h1 class="h-primary">Our Services</h1>
+
+            <p>Everything your car needs, all in one place.</p>
+
+        </div>
+
+
+        <div id="services">
+
+            <!-- SERVICE 1 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://cdn.pixabay.com/photo/2023/03/26/10/47/car-7878056_1280.jpg');">
+
+                <span>🖌️</span>
+
+                <h2>Painting</h2>
+
+                <p>
+                    Premium-quality paint jobs that restore original shine
+                    or give your car a new look. Scratch repair, color change,
+                    and factory finish available.
+                </p>
+
+                <button class="service-btn" data-service="Painting">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=900');">
+
+                <span>✨</span>
+
+                <h2>Coating (Ceramic/Graphene)</h2>
+
+                <p>
+                    Advanced coating that adds shine and shields your car
+                    from water, dust, and oxidation. 1–5 year protection.
+                </p>
+
+                <button class="service-btn"
+                    data-service="Coating (Ceramic/Graphene)">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900');">
+
+                <span>📑</span>
+
+                <h2>Insurance Support</h2>
+
+                <p>
+                    Hassle-free car insurance services – renewals,
+                    claims, and paperwork handled smoothly by our experts.
+                </p>
+
+                <button class="service-btn" data-service="Insurance Support">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 4 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=900');">
+
+                <span>🛠️</span>
+
+                <h2>Denting</h2>
+
+                <p>
+                    Professional dent repair and bodywork to make your car
+                    look brand new again. Spot fixes to full panel restoration.
+                </p>
+
+                <button class="service-btn" data-service="Denting">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 5 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=900');">
+
+                <span>🧼</span>
+
+                <h2>Cleaning</h2>
+
+                <p>
+                    Exterior & interior deep cleaning. Includes foam wash,
+                    vacuuming, dashboard polish, and engine bay cleaning.
+                </p>
+
+                <button class="service-btn" data-service="Cleaning">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 6 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.ctfassets.net/uwf0n1j71a7j/6ihnLVbvnXPpEzduw0cvZH/81e1f68af3a77c000cf19c777324cd8c/car-detailing-guide.png');">
+
+                <span>🧽</span>
+
+                <h2>Detailing</h2>
+
+                <p>
+                    Full interior and exterior detailing to restore
+                    and enhance your car’s appearance and hygiene.
+                </p>
+
+                <button class="service-btn" data-service="Detailing">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 7 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1613214150384-7c6b2b1b5a2d?w=900');">
+
+                <span>🛡️</span>
+
+                <h2>PPF (Paint Protection Film)</h2>
+
+                <p>
+                    Invisible film to protect your paint from scratches,
+                    UV rays, and road debris. Long-lasting, self-healing technology.
+                </p>
+
+                <button class="service-btn"
+                    data-service="PPF (Paint Protection Film)">
+                    Book Service →
+                </button>
+
+            </div>
+
+
+            <!-- SERVICE 8 -->
+            <div class="box service-bg"
+                style="--service-img:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900');">
+
+                <span>🚘</span>
+
+                <h2>Interior Customization</h2>
+
+                <p>
+                    Upgrade your car’s comfort & style with premium seat covers,
+                    ambient lighting, infotainment systems, and more.
+                </p>
+
+                <button class="service-btn"
+                    data-service="Interior Customization">
+                    Book Service →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT US -->
+    <section id="about-container">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200"
+                alt="Premium Car">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="small-heading">WHO WE ARE</span>
+
+            <h1>About <span>Kayasth Motors</span></h1>
+
+            <p>
+                Welcome to Kayasth Motors, your destination for premium
+                car care, detailing, protection and customization.
+            </p>
+
+            <p>
+                We aim to enhance your vehicle's appearance with quality-focused
+                services, attention to detail and customer-oriented solutions.
+                From painting and denting to ceramic coating and interior
+                customization, we bring multiple car care services together.
+            </p>
+
+            <div class="about-points">
+
+                <div>✓ Quality-focused services</div>
+                <div>✓ Attention to every detail</div>
+                <div>✓ Multiple car care solutions</div>
+                <div>✓ Customer satisfaction</div>
+
+            </div>
+
+            <button class="btn" onclick="openBooking()">
+                Get in Touch
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING BANNER -->
+    <section id="booking-banner">
+
+        <div>
+
+            <span class="small-heading">
+                READY TO GIVE YOUR CAR A NEW LOOK?
+            </span>
+
+            <h2>Let's Make Your Car Shine!</h2>
+
+            <p>Choose your service and send us your enquiry.</p>
+
+        </div>
+
+        <button class="btn" onclick="openBooking()">
+            Book Your Service →
+        </button>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-container">
+
+        <div class="section-heading">
+
+            <span class="small-heading">
+                WE'D LOVE TO HEAR FROM YOU
+            </span>
+
+            <h1>Contact Us</h1>
+
+            <p>Have a question or need a service? Send us an enquiry.</p>
+
+        </div>
+
+
+        <div class="contact-wrapper">
+
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-info">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Connect with Kayasth Motors for your car care requirements.
+                </p>
+
+
+                <!-- LOCATION -->
+                <div class="contact-detail">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <h3>Our Location</h3>
+
+                        <p>Greater Noida, Delhi</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="contact-detail">
+
+                    <span>📞</span>
+
+                    <div>
+
+                        <h3>Phone Number</h3>
+
+                        <a href="tel:9876543210">
+                            +91 98765 43210
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="contact-detail">
+
+                    <span>✉️</span>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <a href="mailto:info@kayasthmotors.com">
+                            info@kayasthmotors.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <form id="contactForm">
+
+                <h2>Send Us a Message</h2>
+
+                <label for="contactName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="contactEmail">
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="contactPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="contactPhone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9+\-\s]{10,15}"
+                    required
+                >
+
+
+                <label for="contactMessage">
+                    Your Message
+                </label>
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="How can we help you?"
+                    required
+                ></textarea>
+
+
+                <button type="submit" class="btn">
+                    Send Message →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <div class="footer-content">
+
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <h2>KAYASTH <span>MOTORS</span></h2>
+
+                <p>Your Car. Your Style. Our Passion.</p>
+
+                <p>
+                    Premium car care, detailing and customization solutions.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+
+                <a href="#services-container">Our Services</a>
+
+                <a href="#about-container">About Us</a>
+
+                <a href="#contact-container">Contact Us</a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+            <div class="footer-links">
+
+                <h3>Our Services</h3>
+
+                <a href="#services-container">Painting</a>
+
+                <a href="#services-container">Ceramic Coating</a>
+
+                <a href="#services-container">Denting</a>
+
+                <a href="#services-container">PPF</a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-links">
+
+                <h3>Contact</h3>
+
+                <a href="tel:9876543210">
+                    +91 98765 43210
+                </a>
+
+                <a href="#contact-container">
+                    Send Enquiry
+                </a>
+
+                <button onclick="openBooking()">
+                    Book a Service
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                Kayasth Motors. All Rights Reserved.
+            </p>
+
+            <p>Designed with ❤️ for car lovers.</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOKING MODAL -->
+    <div class="modal" id="bookingModal" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="Close booking form"
+            >
+                &times;
+            </button>
+
+
+            <span class="small-heading">
+                KAYASTH MOTORS
+            </span>
+
+            <h2>Book Your Service</h2>
+
+            <p>
+                Fill in your details and send your booking enquiry.
+            </p>
+
+
+            <form id="bookingForm">
+
+                <label for="bookingName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="bookingName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="bookingPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="bookingPhone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9+\-\s]{10,15}"
+                    required
+                >
+
+
+                <label for="carModel">
+                    Car Model
+                </label>
+
+                <input
+                    type="text"
+                    id="carModel"
+                    placeholder="e.g. Hyundai Creta"
+                    required
+                >
+
+
+                <label for="bookingService">
+                    Select Service
+                </label>
+
+                <select id="bookingService" required>
+
+                    <option value="">
+                        Choose a service
+                    </option>
+
+                    <option>Painting</option>
+
+                    <option>Coating (Ceramic/Graphene)</option>
+
+                    <option>Insurance Support</option>
+
+                    <option>Denting</option>
+
+                    <option>Cleaning</option>
+
+                    <option>Detailing</option>
+
+                    <option>PPF (Paint Protection Film)</option>
+
+                    <option>Interior Customization</option>
+
+                </select>
+
+
+                <label for="bookingDate">
+                    Preferred Date
+                </label>
+
+                <input
+                    type="date"
+                    id="bookingDate"
+                    required
+                >
+
+
+                <label for="bookingNotes">
+                    Additional Details
+                </label>
+
+                <textarea
+                    id="bookingNotes"
+                    placeholder="Tell us more about your requirements"
+                ></textarea>
+
+
+                <button type="submit" class="btn">
+                    Submit Booking →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

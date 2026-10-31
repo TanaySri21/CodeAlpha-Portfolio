@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="corner-wave top-wave"></div>
+    <div class="corner-wave bottom-wave"></div>
+
+    <header class="navbar">
+        <div class="logo">🐚 playtime.</div>
+        <div class="game-label">TWO PLAYER GAME</div>
+        <div class="ready"><span></span> Ready to play</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">A CLASSIC, REIMAGINED</p>
+            <h1>Let's play <span>Tic Tac Toe.</span></h1>
+            <p class="subtitle">
+                Think ahead. Make your move. Own the board.
+            </p>
+        </section>
+
+        <section class="game-layout">
+
+            <!-- GAME BOARD -->
+            <div class="board-card">
+
+                <div class="board-heading">
+                    <h2>🐚 GAME BOARD</h2>
+                    <div class="round">ROUND <span id="roundNumber">01</span></div>
+                </div>
+
+                <div class="board-background">
+                    <div class="game-board" id="gameBoard">
+                        <button class="cell" data-index="0"></button>
+                        <button class="cell" data-index="1"></button>
+                        <button class="cell" data-index="2"></button>
+                        <button class="cell" data-index="3"></button>
+                        <button class="cell" data-index="4"></button>
+                        <button class="cell" data-index="5"></button>
+                        <button class="cell" data-index="6"></button>
+                        <button class="cell" data-index="7"></button>
+                        <button class="cell" data-index="8"></button>
+                    </div>
+                </div>
+
+                <p class="board-note">Take your time. Play your best.</p>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="turn-card">
+                    <div class="card-heading">
+                        <span>〰 CURRENT TURN</span>
+                        <span class="live-dot"></span>
+                    </div>
+
+                    <div class="turn-content">
+                        <div class="turn-icon" id="turnIcon">⭐</div>
+                        <div>
+                            <h3 id="turnName">Player One</h3>
+                            <p id="turnDescription">It's your move!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="players-card">
+                    <div class="players-heading">
+                        <h3>THE PLAYERS</h3>
+                        <span>01 vs 02</span>
+                    </div>
+
+                    <div class="player-row player-one" id="playerOne">
+                        <div class="player-icon">⭐</div>
+                        <div class="player-info">
+                            <h4>Player One</h4>
+                            <p>Starfish</p>
+                        </div>
+                        <strong id="scoreX">0</strong>
+                    </div>
+
+                    <div class="player-row player-two" id="playerTwo">
+                        <div class="player-icon">🐚</div>
+                        <div class="player-info">
+                            <h4>Player Two</h4>
+                            <p>Seashell</p>
+                        </div>
+                        <strong id="scoreO">0</strong>
+                    </div>
+
+                    <div class="draw-row">
+                        <span>Draw matches</span>
+                        <strong id="scoreDraw">0</strong>
+                    </div>
+                </div>
+
+                <div class="message-card">
+                    <div class="message-icon" id="messageIcon">🐚</div>
+                    <div>
+                        <h3 id="resultMessage">Game on!</h3>
+                        <p id="resultDescription">Waiting for your first move.</p>
+                    </div>
+                </div>
+
+                <div class="controls-card">
+                    <button id="reset" class="play-again">
+                        ↻ &nbsp; Play Again
+                    </button>
+
+                    <button id="resetScore" class="reset-score">
+                        Reset All Scores
+                    </button>
+                </div>
+
+            </aside>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MADE FOR THE LOVE OF PLAY</p>
+        <span>Have a lovely game! ♡</span>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+</html>
